@@ -1,5 +1,3 @@
-import 'package:banking_store/home_page/home_page.dart';
-import 'package:banking_store/landing_page/landing_page.dart';
 import 'package:banking_store/notification_page/notification_page.dart';
 import 'package:flutter/material.dart';
 

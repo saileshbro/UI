@@ -1,3 +1,4 @@
+import 'package:banking_store/notification_page/spending_model.dart';
 import 'package:banking_store/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart' as cupertino;
@@ -201,7 +202,75 @@ class NotificationPage extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 35),
+            const SizedBox(height: 15),
+            SizedBox(
+              height: 185,
+              child: ListView.builder(
+                  itemCount: SpendingModel.dummy().length,
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    final model = SpendingModel.dummy()[index];
+                    return Container(
+                      width: 135,
+                      margin: const EdgeInsets.only(right: 15),
+                      decoration: BoxDecoration(
+                        color: model.backgroundColor,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 20),
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Image.asset(model.assetName,
+                                    width: 45, color: model.iconColor),
+                                const SizedBox(height: 6),
+                                Text(
+                                  model.name,
+                                  style: TextStyle(
+                                    color: model.iconColor,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text(
+                                  model.price,
+                                  textAlign: TextAlign.end,
+                                  style: TextStyle(
+                                    color: model.iconColor,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w800,
+                                  ),
+                                ),
+                                Text(
+                                  '/mo',
+                                  style: TextStyle(
+                                    color: model.iconColor,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  }),
+            ),
+            const SizedBox(height: 20),
             Text(
               'Budget',
               softWrap: true,

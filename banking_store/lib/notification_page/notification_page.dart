@@ -22,10 +22,15 @@ class NotificationPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(
-                  Icons.arrow_back_rounded,
-                  color: StoreColors.darkGreen.withOpacity(.9),
-                  size: 30,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Icon(
+                    Icons.arrow_back_rounded,
+                    color: StoreColors.darkGreen.withOpacity(.9),
+                    size: 30,
+                  ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

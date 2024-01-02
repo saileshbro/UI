@@ -2,6 +2,7 @@
 
 import 'dart:math';
 
+import 'package:banking_store/home_page/wallet_page.dart';
 import 'package:banking_store/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
@@ -11,6 +12,15 @@ class LandingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Delay for 2 seconds and open the notification page
+    Future.delayed(Duration(seconds: 3), () {
+      Navigator.push<void>(
+        context,
+        MaterialPageRoute<void>(
+          builder: (BuildContext context) => const WalletPage(),
+        ),
+      );
+    });
     return Scaffold(
         backgroundColor: Colors.white,
         body: Stack(

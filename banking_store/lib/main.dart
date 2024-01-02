@@ -1,4 +1,6 @@
-import 'package:banking_store/notification_page/notification_page.dart';
+import 'package:banking_store/home_page/wallet_page.dart';
+import 'package:banking_store/home_page/tab_page.dart';
+import 'package:banking_store/landing_page/landing_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: NotificationPage(),
+      home: TabPage(),
     );
   }
 }

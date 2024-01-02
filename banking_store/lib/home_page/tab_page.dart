@@ -1,4 +1,5 @@
-import 'package:banking_store/home_page/wallet_page.dart';
+import 'package:banking_store/home_page/tabs/home/home_tab.dart';
+import 'package:banking_store/home_page/tabs/wallet/wallet_tab.dart';
 import 'package:banking_store/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart' as cupertino;
@@ -12,7 +13,7 @@ class TabPage extends StatefulWidget {
 
 class _TabPageState extends State<TabPage> with TickerProviderStateMixin {
   late TabController tabController;
-  int selectedTabIndex = 1;
+  int selectedTabIndex = 0;
   @override
   void initState() {
     super.initState();
@@ -41,8 +42,8 @@ class _TabPageState extends State<TabPage> with TickerProviderStateMixin {
               child: TabBarView(
                 controller: tabController,
                 children: [
-                  Container(color: Colors.red),
-                  WalletPage(),
+                  HomeTab(),
+                  WalletTab(),
                   Container(color: Colors.green),
                   Container(color: Colors.green),
                 ],

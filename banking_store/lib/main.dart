@@ -1,4 +1,4 @@
-import 'package:banking_store/home_page/wallet_page.dart';
+import 'package:banking_store/home_page/tabs/wallet/wallet_tab.dart';
 import 'package:banking_store/home_page/tab_page.dart';
 import 'package:banking_store/landing_page/landing_page.dart';
 import 'package:flutter/material.dart';

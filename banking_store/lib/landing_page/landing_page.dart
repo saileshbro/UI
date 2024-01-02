@@ -2,7 +2,7 @@
 
 import 'dart:math';
 
-import 'package:banking_store/home_page/wallet_page.dart';
+import 'package:banking_store/home_page/tabs/wallet/wallet_tab.dart';
 import 'package:banking_store/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
@@ -17,7 +17,7 @@ class LandingPage extends StatelessWidget {
       Navigator.push<void>(
         context,
         MaterialPageRoute<void>(
-          builder: (BuildContext context) => const WalletPage(),
+          builder: (BuildContext context) => const WalletTab(),
         ),
       );
     });
@@ -33,7 +33,7 @@ class LandingPage extends StatelessWidget {
               child: Transform.rotate(
                 angle: 4.5,
                 child: Image(
-                  image: Svg('svgs/svg-path.svg'),
+                  image: Svg('assets/svgs/svg-path.svg'),
                   color: StoreColors.darkTeal,
                 ),
               ),
@@ -46,7 +46,7 @@ class LandingPage extends StatelessWidget {
               child: Transform.rotate(
                 angle: pi,
                 child: Image(
-                  image: Svg('svgs/svg-path.svg'),
+                  image: Svg('assets/svgs/svg-path.svg'),
                   color: StoreColors.darkBrown,
                 ),
               ),
@@ -59,7 +59,7 @@ class LandingPage extends StatelessWidget {
               child: Transform.rotate(
                 angle: 2 * pi,
                 child: Image(
-                  image: Svg('svgs/svg-path.svg'),
+                  image: Svg('assets/svgs/svg-path.svg'),
                   color: StoreColors.darkGreen,
                 ),
               ),
@@ -74,7 +74,7 @@ class LandingPage extends StatelessWidget {
                     child: Image(
                       height: 100,
                       width: 90,
-                      image: Svg('svgs/svg-path.svg'),
+                      image: Svg('assets/svgs/svg-path.svg'),
                       color: StoreColors.darkTeal,
                     ),
                   ),
@@ -90,7 +90,7 @@ class LandingPage extends StatelessWidget {
                 flipX: true,
                 flipY: true,
                 child: Image(
-                  image: Svg('svgs/svg-path.svg'),
+                  image: Svg('assets/svgs/svg-path.svg'),
                   color: StoreColors.darkBrown,
                 ),
               ),
@@ -105,7 +105,7 @@ class LandingPage extends StatelessWidget {
               child: Transform.rotate(
                 angle: pi * 0.5,
                 child: Image(
-                  image: Svg('svgs/svg-path.svg'),
+                  image: Svg('assets/svgs/svg-path.svg'),
                   color: StoreColors.ligthPink,
                 ),
               ),

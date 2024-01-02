@@ -1,17 +1,17 @@
-import 'package:banking_store/home_page/chart.dart';
-import 'package:banking_store/home_page/payment_model.dart';
+import 'package:banking_store/home_page/tabs/wallet/chart.dart';
+import 'package:banking_store/home_page/tabs/wallet/payment_model.dart';
 import 'package:banking_store/notification_page/notification_page.dart';
 import 'package:banking_store/utils/colors.dart';
 import 'package:flutter/material.dart';
 
-class WalletPage extends StatefulWidget {
-  const WalletPage({Key? key}) : super(key: key);
+class WalletTab extends StatefulWidget {
+  const WalletTab({Key? key}) : super(key: key);
 
   @override
-  State<WalletPage> createState() => _WalletPageState();
+  State<WalletTab> createState() => _WalletTabState();
 }
 
-class _WalletPageState extends State<WalletPage> {
+class _WalletTabState extends State<WalletTab> {
   int selectedIndex = 3;
   @override
   Widget build(BuildContext context) {

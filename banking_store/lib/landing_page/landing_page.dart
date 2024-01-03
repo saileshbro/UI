@@ -2,7 +2,7 @@
 
 import 'dart:math';
 
-import 'package:banking_store/home_page/tabs/wallet/wallet_tab.dart';
+import 'package:banking_store/home_page/tab_page.dart';
 import 'package:banking_store/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
@@ -17,7 +17,7 @@ class LandingPage extends StatelessWidget {
       Navigator.push<void>(
         context,
         MaterialPageRoute<void>(
-          builder: (BuildContext context) => const WalletTab(),
+          builder: (BuildContext context) => const TabPage(),
         ),
       );
     });

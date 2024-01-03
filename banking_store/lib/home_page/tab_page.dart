@@ -1,4 +1,6 @@
 import 'package:banking_store/home_page/tabs/home/home_tab.dart';
+import 'package:banking_store/home_page/tabs/insights/insights_tab.dart';
+import 'package:banking_store/home_page/tabs/profile/profile_tab.dart';
 import 'package:banking_store/home_page/tabs/wallet/wallet_tab.dart';
 import 'package:banking_store/utils/colors.dart';
 import 'package:flutter/material.dart';
@@ -44,13 +46,14 @@ class _TabPageState extends State<TabPage> with TickerProviderStateMixin {
                 children: [
                   HomeTab(),
                   WalletTab(),
-                  Container(color: Colors.green),
-                  Container(color: Colors.green),
+                  InsightsTab(controller: tabController),
+                  ProfileTab(),
                 ],
               ),
             ),
-            Positioned(
-              bottom: 0,
+            AnimatedPositioned(
+              duration: const Duration(milliseconds: 300),
+              bottom: selectedTabIndex == 2 ? -100 : 0,
               left: 0,
               right: 0,
               height: 80,

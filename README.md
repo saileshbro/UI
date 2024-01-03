@@ -1,6 +1,7 @@
-# UI
+# UIs
 
 ### Collection of UIs made in Flutter
+### Drop a start ⭐️ if you find it useful.
 
 # 1. Sun Glasses Store
 ### [Credits](https://dribbble.com/shots/22836673-E-commerce-mobile-app)

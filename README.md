@@ -1,6 +1,4 @@
-# UIs
-
-### Collection of UIs made in Flutter
+## Collection of UIs made in Flutter
 ### Drop a start ⭐️ if you find it useful.
 
 # 1. Music Player

@@ -1,4 +1,4 @@
-import 'package:firechat/pages/near_you_page.dart';
+import 'package:firechat/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: const NearYouPage(),
+      home: const ProfilePage(),
     );
   }
 }

@@ -7,6 +7,7 @@ class ShadowBox extends StatelessWidget {
   final double width;
   final double height;
   final Color borderColor;
+  final Color shadowColor;
   final double borderRadius;
   final double borderWidth;
   const ShadowBox({
@@ -16,8 +17,9 @@ class ShadowBox extends StatelessWidget {
     required this.child,
     this.offset = const Offset(3, 3),
     this.borderColor = Colors.black,
+    this.shadowColor = Colors.black,
     this.borderRadius = 10,
-    this. borderWidth = 2,
+    this.borderWidth = 2,
     super.key,
   });
 
@@ -35,7 +37,7 @@ class ShadowBox extends StatelessWidget {
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black,
+            color: shadowColor,
             blurRadius: 0,
             offset: offset,
           ),

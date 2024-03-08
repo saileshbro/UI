@@ -1,4 +1,5 @@
 import 'package:firechat/utils/utils.dart';
+import 'package:firechat/widgets/heading.dart';
 import 'package:firechat/widgets/shadow_box.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,13 +13,19 @@ class NearYouPage extends StatelessWidget {
       body: Container(
         color: Colors.white,
         width: MediaQuery.of(context).size.width,
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           children: [
             const SizedBox(height: 60),
-            _buildHeading(),
+            Heading(
+              heading: 'Near You',
+              rightIcon: Icons.menu_rounded,
+              rightColor: FireChatColors.lightGreen,
+              leftIcon: Icons.arrow_back,
+            ),
             const SizedBox(height: 30),
             ShadowBox(
-              width: MediaQuery.of(context).size.width - 30,
+              width: MediaQuery.of(context).size.width - 25,
               height: 540,
               color: FireChatColors.purple,
               offset: Offset(5, 7),
@@ -128,66 +135,38 @@ class NearYouPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ShadowBox(
-                    width: 75,
-                    height: 77,
-                    color: FireChatColors.lightOrange,
-                    child: const Icon(Icons.electric_bolt_rounded, size: 35, color: Colors.red),
-                  ),
-                  ShadowBox(
-                    width: 75,
-                    height: 77,
-                    child: const Icon(CupertinoIcons.star_fill,
-                        size: 35, color: Colors.orange),
-                  ),
-                  ShadowBox(
-                    width: 75,
-                    height: 77,
-                    child: const Icon(CupertinoIcons.chat_bubble_2_fill,
-                        size: 35, color: Colors.blue),
-                  ),
-                  ShadowBox(
-                    width: 75,
-                    height: 77,
-                    child: const Icon(CupertinoIcons.gift_fill,
-                        size: 35, color: Colors.red),
-                  ),
-                ],
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ShadowBox(
+                  width: 75,
+                  height: 77,
+                  color: FireChatColors.lightOrange,
+                  child: const Icon(Icons.electric_bolt_rounded,
+                      size: 35, color: Colors.red),
+                ),
+                ShadowBox(
+                  width: 75,
+                  height: 77,
+                  child: const Icon(CupertinoIcons.star_fill,
+                      size: 35, color: Colors.orange),
+                ),
+                ShadowBox(
+                  width: 75,
+                  height: 77,
+                  child: const Icon(CupertinoIcons.chat_bubble_2_fill,
+                      size: 35, color: Colors.blue),
+                ),
+                ShadowBox(
+                  width: 75,
+                  height: 77,
+                  child: const Icon(CupertinoIcons.gift_fill,
+                      size: 35, color: Colors.green),
+                ),
+              ],
             )
           ],
         ),
-      ),
-    );
-  }
-
-  Widget _buildHeading() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          ShadowBox(
-            width: 57,
-            height: 60,
-            child: const Icon(Icons.arrow_back),
-          ),
-          const Text(
-            'Near You',
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-          ),
-          ShadowBox(
-            width: 57,
-            height: 60,
-            color: FireChatColors.lightGreen,
-            child: const Icon(Icons.menu_rounded),
-          ),
-        ],
       ),
     );
   }

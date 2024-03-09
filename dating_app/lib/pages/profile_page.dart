@@ -5,7 +5,10 @@ import 'package:firechat/widgets/shadow_box.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatefulWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  final String name;
+  final String assetPath;
+  const ProfilePage({required this.name, required this.assetPath, Key? key})
+      : super(key: key);
 
   @override
   State<ProfilePage> createState() => _ProfilePageState();
@@ -26,7 +29,7 @@ class _ProfilePageState extends State<ProfilePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Emilia Clarke',
+                  widget.name,
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(width: 10),
@@ -396,6 +399,10 @@ class _ProfilePageState extends State<ProfilePage> {
           child: Heading(
             heading: 'My Profile',
             fontSize: 24,
+            onLeftTap: () {
+              Navigator.pop(context);
+            },
+            onRightTap: () {},
             rightIcon: Icons.menu_rounded,
             rightColor: FireChatColors.lightGreen,
             leftIcon: Icons.arrow_back,
@@ -415,7 +422,7 @@ class _ProfilePageState extends State<ProfilePage> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(18),
               child: Image.asset(
-                'images/profile_5.jpeg',
+                widget.assetPath,
                 fit: BoxFit.cover,
               ),
             ),

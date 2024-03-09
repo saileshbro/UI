@@ -5,7 +5,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class NearYouPage extends StatelessWidget {
-  const NearYouPage({Key? key}) : super(key: key);
+  final String name;
+  final String profileImagePath;
+  const NearYouPage(
+      {required this.name, required this.profileImagePath, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +22,8 @@ class NearYouPage extends StatelessWidget {
             const SizedBox(height: 60),
             Heading(
               heading: 'Near You',
+              onLeftTap: () => Navigator.pop(context),
+              onRightTap: null,
               rightIcon: Icons.menu_rounded,
               rightColor: FireChatColors.lightGreen,
               leftIcon: Icons.arrow_back,
@@ -49,13 +54,10 @@ class NearYouPage extends StatelessWidget {
                               borderRadius: 20,
                               offset: Offset(0, 0),
                               child: ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(1),
-                                  child: Image.asset(
-                                    'images/profile_6.jpeg',
-                                    fit: BoxFit.cover,
-                                  ),
+                                borderRadius: BorderRadius.circular(18),
+                                child: Image.asset(
+                                  profileImagePath,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ),
@@ -97,8 +99,8 @@ class NearYouPage extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              'Carolin Sky, 22',
+                            Text(
+                              '$name, 22',
                               style: TextStyle(
                                   fontSize: 29, fontWeight: FontWeight.bold),
                             ),

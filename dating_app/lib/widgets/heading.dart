@@ -1,5 +1,7 @@
 import 'package:firechat/widgets/shadow_box.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Heading extends StatelessWidget {
   final String heading;
@@ -8,9 +10,13 @@ class Heading extends StatelessWidget {
   final Color leftColor;
   final Color rightColor;
   final double fontSize;
+  final Function()? onLeftTap;
+  final Function()? onRightTap;
   const Heading({
     required this.heading,
     required this.leftIcon,
+    required this.onLeftTap,
+    required this.onRightTap,
     required this.rightIcon,
     this.fontSize = 30,
     this.leftColor = Colors.white,
@@ -20,29 +26,32 @@ class Heading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          ShadowBox(
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        GestureDetector(
+          onTap: onLeftTap ?? () {},
+          child: ShadowBox(
             width: 57,
             height: 60,
             color: leftColor,
             child: Icon(leftIcon),
           ),
-          Text(
-            heading,
-            style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
-          ),
-          ShadowBox(
+        ),
+        Text(
+          heading,
+          style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
+        ),
+        GestureDetector(
+          onTap: onRightTap ?? () {},
+          child: ShadowBox(
             width: 57,
             height: 60,
             color: rightColor,
             child: Icon(rightIcon),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

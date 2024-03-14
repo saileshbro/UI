@@ -22,4 +22,8 @@ class BookStoreColors {
   static const Color veryLightSand = Color(0xFFfbf8f6);
 
   static const Color darkBrown = Color(0xFF7e655c);
+
+  static const Color golden = Color(0xFFf1b46c);
+
+  static const Color pagesColor = Color(0xFFf0e8df);
 }

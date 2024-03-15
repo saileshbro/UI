@@ -20,24 +20,31 @@ class BookCategory {
 List<BookCategory> dummyBooksCategory = [
   BookCategory(
     id: 1,
-    name: 'New',
+    name: 'All',
     icon: Center(
-        child: Icon(Icons.fiber_new_outlined, color: Colors.white, size: 30)),
+        child: Icon(Icons.my_library_books_rounded, color: Colors.white, size: 17)),
     colorSet: BookColorSet.categoryRed,
   ),
   BookCategory(
     id: 2,
     name: 'Fiction',
     icon: Center(
-        child: Icon(Icons.rocket, color: BookStoreColors.golden, size: 25)),
+        child: Icon(Icons.rocket, color: BookStoreColors.golden, size: 20)),
     colorSet: BookColorSet.categoryPurple,
+  ),
+  BookCategory(
+    id: 1,
+    name: 'New',
+    icon: Center(
+        child: Icon(Icons.fiber_new_outlined, color: Colors.white, size: 20)),
+    colorSet: BookColorSet.categoryRed,
   ),
   BookCategory(
     id: 3,
     name: 'Kids',
     icon: Center(
         child: Icon(CupertinoIcons.group_solid,
-            color: BookStoreColors.golden, size: 25)),
+            color: BookStoreColors.golden, size: 20)),
     colorSet: BookColorSet.categoryGreen,
   ),
   BookCategory(
@@ -46,8 +53,8 @@ List<BookCategory> dummyBooksCategory = [
     icon: Center(
         child: Image.asset(
       'images/sci_fi.png',
-      width: 35,
-      height: 35,
+      width: 32,
+      height: 32,
       fit: BoxFit.fill,
     )),
     colorSet: BookColorSet.categoryBlue,
@@ -56,8 +63,8 @@ List<BookCategory> dummyBooksCategory = [
     id: 5,
     name: 'Love',
     icon: Center(
-        child: Icon(CupertinoIcons.group_solid,
-            color: BookStoreColors.golden, size: 25)),
+        child: Icon(CupertinoIcons.heart_circle_fill,
+            color: BookStoreColors.golden, size: 20)),
     colorSet: BookColorSet.categoryRed,
   ),
   BookCategory(
@@ -65,7 +72,7 @@ List<BookCategory> dummyBooksCategory = [
     name: 'Action',
     icon: Center(
         child: Icon(Icons.movie_filter_rounded,
-            color: BookStoreColors.golden, size: 25)),
+            color: BookStoreColors.golden, size: 20)),
     colorSet: BookColorSet.categoryBlue,
   ),
 ];

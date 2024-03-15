@@ -1,14 +1,14 @@
 import 'package:book_store/utils/utils_colors.dart';
 import 'package:flutter/material.dart';
 
-class BookWidget extends StatelessWidget {
+class BookWidgetCategory extends StatelessWidget {
   final double width;
   final Color bookLeftVerticalStrip;
   final Color bookBottomHorizontalStrip;
   final Color bookPagesColor;
   final bool showBookMark;
   final Widget bookCover;
-  const BookWidget({
+  const BookWidgetCategory({
     required this.bookLeftVerticalStrip,
     required this.bookBottomHorizontalStrip,
     required this.bookPagesColor,
@@ -18,7 +18,6 @@ class BookWidget extends StatelessWidget {
     super.key,
   });
 
-  // 167 / 260
   @override
   Widget build(BuildContext context) {
     final height = ((65 / 42) * width);

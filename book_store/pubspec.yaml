@@ -63,6 +63,8 @@ flutter:
   assets:
     - images/gradient.png
     - images/sci_fi.png
+    - images/profile.png
+    - images/pillar.png
     - images/audio_visualizer.png
     - images/books/book1.png
     - images/books/book2.png

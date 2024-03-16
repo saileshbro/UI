@@ -1,5 +1,6 @@
 import 'package:book_store/models/book_model.dart';
 import 'package:book_store/pages/books_page_view.dart';
+import 'package:book_store/pages/landing_page_view.dart';
 import 'package:book_store/pages/play_page_view.dart';
 import 'package:book_store/pages/settings_page_view.dart';
 import 'package:book_store/utils/utils_colors.dart';
@@ -17,7 +18,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
-  int tabIndex = 3;
+  int tabIndex = 0;
 
   @override
   void initState() {
@@ -43,12 +44,10 @@ class _HomePageState extends State<HomePage>
               controller: _tabController,
               physics: const NeverScrollableScrollPhysics(),
               children: [
+                LandingPageView(),
                 BooksPageView(),
                 Container(),
-                Container(),
-                PlayPageView(
-                  book : dummyBooks[1]
-                ),
+                PlayPageView(book: dummyBooks[1]),
                 SettingsPageView(),
               ],
             ),

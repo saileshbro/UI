@@ -1,5 +1,6 @@
 import 'package:book_store/models/book_model.dart';
 import 'package:book_store/utils/utils_colors.dart';
+import 'package:book_store/widgets/all_books_widget_small.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -21,8 +22,7 @@ List<BookCategory> dummyBooksCategory = [
   BookCategory(
     id: 1,
     name: 'All',
-    icon: Center(
-        child: Icon(Icons.my_library_books_rounded, color: Colors.white, size: 17)),
+    icon: AllBooksWidgetSmall(),
     colorSet: BookColorSet.categoryRed,
   ),
   BookCategory(
@@ -31,13 +31,6 @@ List<BookCategory> dummyBooksCategory = [
     icon: Center(
         child: Icon(Icons.rocket, color: BookStoreColors.golden, size: 20)),
     colorSet: BookColorSet.categoryPurple,
-  ),
-  BookCategory(
-    id: 1,
-    name: 'New',
-    icon: Center(
-        child: Icon(Icons.fiber_new_outlined, color: Colors.white, size: 20)),
-    colorSet: BookColorSet.categoryRed,
   ),
   BookCategory(
     id: 3,
@@ -74,5 +67,12 @@ List<BookCategory> dummyBooksCategory = [
         child: Icon(Icons.movie_filter_rounded,
             color: BookStoreColors.golden, size: 20)),
     colorSet: BookColorSet.categoryBlue,
+  ),
+  BookCategory(
+    id: 7,
+    name: 'New',
+    icon: Center(
+        child: Icon(Icons.fiber_new_outlined, color: Colors.white, size: 20)),
+    colorSet: BookColorSet.categoryRed,
   ),
 ];

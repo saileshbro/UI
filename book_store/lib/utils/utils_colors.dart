@@ -18,6 +18,9 @@ class BookStoreColors {
 
   static const Color lightSand = Color(0xFFf2eae0);
   static const Color mediumSand = Color(0xFFe6dbce);
+  static const Color pillarBackgroundColor = Color(0xFFfaefe4);
+
+  static const Color darkBlueBook = Color(0xFF304f6a);
 
   static const Color veryLightSand = Color(0xFFfbf8f6);
 

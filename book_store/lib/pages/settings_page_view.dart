@@ -1,9 +1,14 @@
 import 'package:book_store/pages/home_page.dart';
 import 'package:book_store/utils/utils_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class SettingsPageView extends StatelessWidget {
-  const SettingsPageView({Key? key}) : super(key: key);
+  final Function(int) openTab;
+
+  const SettingsPageView({
+    required this.openTab,
+    Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -68,20 +73,25 @@ class SettingsPageView extends StatelessWidget {
                               ),
                             ),
                             const SizedBox(height: 15),
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(30),
-                              child: Container(
-                                color: BookStoreColors.mediumRed,
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 25,
-                                  vertical: 10,
-                                ),
-                                child: const Text(
-                                  'View all',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
+                            GestureDetector(
+                              onTap: () {
+                                openTab(1);
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(30),
+                                child: Container(
+                                  color: BookStoreColors.mediumRed,
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 25,
+                                    vertical: 10,
+                                  ),
+                                  child: const Text(
+                                    'View all',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                               ),

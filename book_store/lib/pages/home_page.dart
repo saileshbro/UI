@@ -20,6 +20,22 @@ class _HomePageState extends State<HomePage>
   late TabController _tabController;
   int tabIndex = 0;
 
+  BookModel book = dummyBooks[1];
+
+  void openTab(int index) {
+    setState(() {
+      tabIndex = index;
+      _tabController.animateTo(tabIndex);
+    });
+  }
+
+  void openPlayWithBook(BookModel book) {
+    setState(() {
+      this.book = book;
+    });
+    openTab(3);
+  }
+
   @override
   void initState() {
     super.initState();
@@ -44,11 +60,17 @@ class _HomePageState extends State<HomePage>
               controller: _tabController,
               physics: const NeverScrollableScrollPhysics(),
               children: [
-                LandingPageView(),
-                BooksPageView(),
+                LandingPageView(
+                  openTab: openTab,
+                ),
+                BooksPageView(
+                  openPlayWithBook: openPlayWithBook,
+                ),
                 Container(),
-                PlayPageView(book: dummyBooks[1]),
-                SettingsPageView(),
+                PlayPageView(book: book),
+                SettingsPageView(
+                  openTab: openTab,
+                ),
               ],
             ),
           ),

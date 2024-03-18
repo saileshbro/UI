@@ -2,12 +2,16 @@ import 'package:book_store/models/book_category.dart';
 import 'package:book_store/models/book_model.dart';
 import 'package:book_store/pages/home_page.dart';
 import 'package:book_store/utils/utils_colors.dart';
+import 'package:book_store/widgets/all_books_widget_small.dart';
 import 'package:book_store/widgets/book_widget_big.dart';
 import 'package:book_store/widgets/book_widget_category.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 class BooksPageView extends StatelessWidget {
-  const BooksPageView({Key? key}) : super(key: key);
+  final Function(BookModel) openPlayWithBook;
+  const BooksPageView({required this.openPlayWithBook, Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +69,7 @@ class BooksPageView extends StatelessWidget {
                 ),
               ),
             ),
-    
+
             // List of books category horizontal scroll
             const SizedBox(height: 20),
             SizedBox(
@@ -83,29 +87,36 @@ class BooksPageView extends StatelessWidget {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.15),
-                                blurRadius: 10,
-                                offset: const Offset(.5, .5),
-                              ),
-                            ],
+                            boxShadow: book.name.toLowerCase() == 'all'
+                                ? null
+                                : [
+                                    BoxShadow(
+                                      color: Colors.black.withOpacity(0.15),
+                                      blurRadius: 10,
+                                      offset: const Offset(.5, .5),
+                                    ),
+                                  ],
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: BookWidgetCategory(
-                            bookPagesColor: BookStoreColors.pagesColor,
-                            bookLeftVerticalStrip:
-                                book.colorSet.bookLeftVerticalStrip,
-                            bookBottomHorizontalStrip:
-                                book.colorSet.bookBottomHorizontalStrip,
-                            bookCover: Container(
-                              color: book.colorSet.bookLeftVerticalStrip
-                                  .withOpacity(0.7),
-                              child: book.icon,
-                            ),
-                            showBookMark: true,
-                            width: 33,
-                          ),
+                          child: book.name.toLowerCase() == 'all'
+                              ? Padding(
+                                  padding: const EdgeInsets.only(bottom: 12),
+                                  child: AllBooksWidgetSmall(),
+                                )
+                              : BookWidgetCategory(
+                                  bookPagesColor: BookStoreColors.pagesColor,
+                                  bookLeftVerticalStrip:
+                                      book.colorSet.bookLeftVerticalStrip,
+                                  bookBottomHorizontalStrip:
+                                      book.colorSet.bookBottomHorizontalStrip,
+                                  bookCover: Container(
+                                    color: book.colorSet.bookLeftVerticalStrip
+                                        .withOpacity(0.7),
+                                    child: book.icon,
+                                  ),
+                                  showBookMark: true,
+                                  width: 33,
+                                ),
                         ),
                         const SizedBox(height: 2),
                         Text(
@@ -199,57 +210,62 @@ class BooksPageView extends StatelessWidget {
                 itemCount: dummyBooks.length,
                 itemBuilder: (context, index) {
                   final book = dummyBooks[index];
-                  return Container(
-                    width: 100,
-                    height: 240,
-                    margin: const EdgeInsets.only(right: 24),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        BookWidgetBig(
-                          bookPagesColor: BookStoreColors.pagesColor,
-                          bookLeftVerticalStrip:
-                              book.colorSet.bookLeftVerticalStrip,
-                          bookBottomHorizontalStrip:
-                              book.colorSet.bookBottomHorizontalStrip,
-                          bookCover: Image.asset(
-                            book.assetPath,
-                            fit: BoxFit.cover,
+                  return GestureDetector(
+                    onTap: () {
+                      openPlayWithBook(book);
+                    },
+                    child: Container(
+                      width: 100,
+                      height: 240,
+                      margin: const EdgeInsets.only(right: 24),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          BookWidgetBig(
+                            bookPagesColor: BookStoreColors.pagesColor,
+                            bookLeftVerticalStrip:
+                                book.colorSet.bookLeftVerticalStrip,
+                            bookBottomHorizontalStrip:
+                                book.colorSet.bookBottomHorizontalStrip,
+                            bookCover: Image.asset(
+                              book.assetPath,
+                              fit: BoxFit.cover,
+                            ),
+                            showBookMark: true,
+                            width: 150,
                           ),
-                          showBookMark: true,
-                          width: 150,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 5),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const SizedBox(height: 2),
-                              Text(
-                                book.name,
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.gentiumBookPlus().copyWith(
-                                  color: BookStoreColors.darkBrown,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 13.5,
-                                  overflow: TextOverflow.ellipsis,
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const SizedBox(height: 2),
+                                Text(
+                                  book.name,
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.gentiumBookPlus().copyWith(
+                                    color: BookStoreColors.darkBrown,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 13.5,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 1),
-                              Text(
-                                book.author,
-                                textAlign: TextAlign.left,
-                                style: GoogleFonts.gentiumBookPlus().copyWith(
-                                  color: BookStoreColors.mediumRed,
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 11,
-                                  overflow: TextOverflow.ellipsis,
+                                const SizedBox(height: 1),
+                                Text(
+                                  book.author,
+                                  textAlign: TextAlign.left,
+                                  style: GoogleFonts.gentiumBookPlus().copyWith(
+                                    color: BookStoreColors.mediumRed,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 11,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   );
                 },
@@ -330,57 +346,62 @@ class BooksPageView extends StatelessWidget {
                 itemCount: dummyEBooks.length,
                 itemBuilder: (context, index) {
                   final book = dummyEBooks[index];
-                  return Container(
-                    width: 100,
-                    height: 240,
-                    margin: const EdgeInsets.only(right: 24),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        BookWidgetBig(
-                          bookPagesColor: BookStoreColors.pagesColor,
-                          bookLeftVerticalStrip:
-                              book.colorSet.bookLeftVerticalStrip,
-                          bookBottomHorizontalStrip:
-                              book.colorSet.bookBottomHorizontalStrip,
-                          bookCover: Image.asset(
-                            book.assetPath,
-                            fit: BoxFit.cover,
+                  return GestureDetector(
+                    onTap: () {
+                      openPlayWithBook(book);
+                    },
+                    child: Container(
+                      width: 100,
+                      height: 240,
+                      margin: const EdgeInsets.only(right: 24),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          BookWidgetBig(
+                            bookPagesColor: BookStoreColors.pagesColor,
+                            bookLeftVerticalStrip:
+                                book.colorSet.bookLeftVerticalStrip,
+                            bookBottomHorizontalStrip:
+                                book.colorSet.bookBottomHorizontalStrip,
+                            bookCover: Image.asset(
+                              book.assetPath,
+                              fit: BoxFit.cover,
+                            ),
+                            showBookMark: true,
+                            width: 150,
                           ),
-                          showBookMark: true,
-                          width: 150,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 5),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const SizedBox(height: 2),
-                              Text(
-                                book.name,
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.gentiumBookPlus().copyWith(
-                                  color: BookStoreColors.darkBrown,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 13.5,
-                                  overflow: TextOverflow.ellipsis,
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const SizedBox(height: 2),
+                                Text(
+                                  book.name,
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.gentiumBookPlus().copyWith(
+                                    color: BookStoreColors.darkBrown,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 13.5,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 1),
-                              Text(
-                                book.author,
-                                textAlign: TextAlign.left,
-                                style: GoogleFonts.gentiumBookPlus().copyWith(
-                                  color: BookStoreColors.mediumRed,
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 11,
-                                  overflow: TextOverflow.ellipsis,
+                                const SizedBox(height: 1),
+                                Text(
+                                  book.author,
+                                  textAlign: TextAlign.left,
+                                  style: GoogleFonts.gentiumBookPlus().copyWith(
+                                    color: BookStoreColors.mediumRed,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 11,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   );
                 },

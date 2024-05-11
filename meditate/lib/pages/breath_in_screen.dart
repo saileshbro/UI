@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:medidate/utils/colors.dart';
+import 'package:meditate/utils/colors.dart';
 
 class BreathInScreen extends StatelessWidget {
   final String title;

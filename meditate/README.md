@@ -1,4 +1,4 @@
-# medidate
+# meditate
 
 A new Flutter project.
 

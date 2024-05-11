@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:medidate/pages/breath_in_screen.dart';
-import 'package:medidate/utils/colors.dart';
+import 'package:meditate/pages/breath_in_screen.dart';
+import 'package:meditate/utils/colors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

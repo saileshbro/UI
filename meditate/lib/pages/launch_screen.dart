@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:medidate/pages/home_screen.dart';
-import 'package:medidate/utils/colors.dart';
+import 'package:meditate/pages/home_screen.dart';
+import 'package:meditate/utils/colors.dart';
 
 class LaunchScreen extends StatelessWidget {
   const LaunchScreen({super.key});

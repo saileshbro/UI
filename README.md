@@ -1,5 +1,6 @@
 ## Collection of UIs made in Flutter
-### Drop a start ⭐️ if you find it useful.
+
+### Drop a start ⭐️ to show appreciation. Thanks
 
 # 1. Meditate and Heal
 ### [Credits](https://dribbble.com/shots/24037088-Meditation-app-design-mobile-app)

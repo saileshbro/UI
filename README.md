@@ -1,6 +1,6 @@
 ## Collection of UIs made in Flutter
 
-### Drop a start ⭐️ to show appreciation. Thanks
+### Please drop a star ⭐️ to show appreciation. Thanks
 
 # 1. Books Arena
 ### [Credits](https://dribbble.com/shots/24116590-eBook-Mobile-App)

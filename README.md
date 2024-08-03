@@ -2,50 +2,54 @@
 
 ### Please hit the star ⭐️ to show appreciation. Thanks!!
 
-# 1. Journeys (Day 2 of 30, UI challenge)
+# 1. Banking App (Day 3 of 30, UI challenge)
+### [Designer Credits](https://dribbble.com/shots/24030587-Banking-Mobile-App)
+<img src="banking/1.png" width="28%" height="28%"> <img src="banking/2.png" width="28%" height="28%"> <img src="banking/3.png" width="28%" height="28%">
+
+# 2. Journeys (Day 2 of 30, UI challenge)
 ### [Designer Credits](https://dribbble.com/shots/23963293-Travel-Booking-Mobile-App-UI)
 <img src="journeys/1.png" width="28%" height="28%"> <img src="journeys/2.png" width="28%" height="28%"> <img src="journeys/3.png" width="28%" height="28%">
 
-# 2. Power Grid (Day 1 of 30, UI challenge)
+# 3. Power Grid (Day 1 of 30, UI challenge)
 ### [Designer Credits](https://dribbble.com/shots/24230360-MYGRID-Smart-AI-Mobile-App)
 <img src="power_grid/1.png" width="28%" height="28%"> <img src="power_grid/2.png" width="28%" height="28%"> <img src="power_grid/3.png" width="28%" height="28%">
 
-# 3. Books Arena
+# 4. Books Arena
 ### [Designer Credits](https://dribbble.com/shots/24116590-eBook-Mobile-App)
 <img src="books_arena/1.png" width="28%" height="28%"> <img src="books_arena/2.png" width="28%" height="28%"> <img src="books_arena/3.png" width="28%" height="28%">
 
-# 4. Meditate and Heal
+# 5. Meditate and Heal
 ### [Designer Credits](https://dribbble.com/shots/24037088-Meditation-app-design-mobile-app)
 <img src="meditate/1.png" width="28%" height="28%"> <img src="meditate/2.png" width="28%" height="28%"> <img src="meditate/3.png" width="28%" height="28%">
 
-# 5. BioSphere
+# 6. BioSphere
 ### [Designer Credits](https://dribbble.com/shots/23304929-BioSphere-Mobile-App-Concept)
 https://github.com/justkawal/UI/assets/49296873/d18d3df0-424f-4646-a9eb-43bd716106b4
 
-# 6. Book Store
+# 7. Book Store
 ### [Designer Credits](https://dribbble.com/shots/23184080-Book-Store-Mobile-Concept)
 <img src="book_store/1.png" width="28%" height="28%"> <img src="book_store/2.png" width="28%" height="28%"> <img src="book_store/3.png" width="28%" height="28%"> <img src="book_store/4.png" width="28%" height="28%">
 
-# 7. Dating App
+# 8. Dating App
 ### [Designer Credits](https://dribbble.com/shots/23309894-Dating-app-design-mobile-app)
 <img src="dating_app/1.png" width="28%" height="28%"> <img src="dating_app/2.png" width="28%" height="28%"> <img src="dating_app/3.png" width="28%" height="28%">
 
-# 8. Music Player
+# 9. Music Player
 ### [Designer Credits](https://dribbble.com/shots/9338617-Simple-Music-Player)
 <img src="music_player/1.png" width="28%" height="28%"> <img src="music_player/2.png" width="28%" height="28%">
 
-# 9. Sun Glasses Store
+# 10. Sun Glasses Store
 ### [Designer Credits](https://dribbble.com/shots/22836673-E-commerce-mobile-app)
 <img src="sunglasses/1.png" width="28%" height="28%"> <img src="sunglasses/2.png" width="28%" height="28%"> <img src="sunglasses/3.png" width="28%" height="28%">
 
-# 10. Banking
+# 11. Banking
 ### [Designer Credits](https://dribbble.com/shots/7285975-Warren-Splash-Investment-Category)
 <img src="banking_store/1.png" width="28%" height="28%"> <img src="banking_store/2.png" width="28%" height="28%"> <img src="banking_store/3.png" width="28%" height="28%">
 <br>
 <img src="banking_store/4.png" width="28%" height="28%"> <img src="banking_store/5.png" width="28%" height="28%"> <img src="banking_store/6.png" width="28%" height="28%">
 
-# 11. Architect UI
+# 12. Architect UI
 <img src="https://github.com/justkawal/architect_ui/blob/169cbf4780b12d5e4130b84e6e32a516d726da2a/1.png" width="28%" height="28%"> <img src="https://github.com/justkawal/architect_ui/blob/169cbf4780b12d5e4130b84e6e32a516d726da2a/2.png" width="28%" height="28%"> <img src="https://github.com/justkawal/architect_ui/blob/169cbf4780b12d5e4130b84e6e32a516d726da2a/3.png" width="28%" height="28%">
 
-# 12. Furniture Store
+# 13. Furniture Store
 <img src="https://github.com/justkawal/furniture_store/blob/702fa3c818f44317f6a9074880cc05cce7aba67a/1.png" width="28%" height="28%"> <img src="https://github.com/justkawal/furniture_store/blob/702fa3c818f44317f6a9074880cc05cce7aba67a/2.png" width="28%" height="28%"> <img src="https://github.com/justkawal/furniture_store/blob/702fa3c818f44317f6a9074880cc05cce7aba67a/3.png" width="28%" height="28%">

@@ -1,6 +1,6 @@
 ## Collection of UIs made in Flutter
 
-### Please follow or hit the star ⭐️ to show appreciation. Thanks!!
+### Please hit the star ⭐️ to show appreciation. Thanks!!
 
 # 1. Tesla App (Day 4 of 30, UI challenge)
 ### [Designer Credits](https://dribbble.com/shots/24365934-EV-Station-Charge-and-Profile-Screen-Design-Friday-Tech-Labs)

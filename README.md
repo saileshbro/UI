@@ -2,7 +2,7 @@
 
 ### Please hit the star ⭐️ to show appreciation. Thanks!!
 
-# 1. Sales Dashboard Desktop App (Day 6 of 30, UI challenge)
+# 1. Sales Dashboard Flutter Desktop (Day 6 of 30, UI challenge)
 ### [Designer Credits](https://dribbble.com/shots/24573449-Sales-Dashboard)
 <img src="sales_dashboard/1.png" width="100%" height="100%">
 

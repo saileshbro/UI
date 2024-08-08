@@ -14,6 +14,7 @@ class _CarDetailPageState extends State<CarDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: ListView(
         padding: const EdgeInsets.only(top: 70, bottom: 50),
         children: [

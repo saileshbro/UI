@@ -4,7 +4,7 @@
 
 # 1. Finances App (Day 12 of 30, UI challenge)
 ### [Designer Credits](https://dribbble.com/shots/21652377-Finance-service-Mobile-app)
-<img src="finances/1.png" width="28%" height="28%"> <img src="finances/2.png" width="28%" height="28%"> <img src="finances/3.png" width="28%" height="28%">
+<img src="finances/1.png" width="28%" height="28%"> <a href="finances/"><img src="finances/2.png" width="28%" height="28%"></a> <img src="finances/3.png" width="28%" height="28%">
 
 # 2. Education Dashboard Flutter Desktop (Day 11 of 30, UI challenge)
 ### [Designer Credits](https://dribbble.com/shots/24505736-Online-Education-App-Design)

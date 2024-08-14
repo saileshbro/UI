@@ -1,5 +1,6 @@
 ## Collection of UIs made in Flutter
 
+## Hi, I'm looking for a Flutter Developer job, if your company has one. Please refer or help me out. I'm currently located in Toronto, Ontario, Canada....
 ### Please hit the star ⭐️ to show appreciation. Thanks!!
 
 # 1. Finances App (Day 12 of 30, UI challenge)

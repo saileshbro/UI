@@ -86,7 +86,9 @@ class BookPage extends StatelessWidget {
                           child: Icon(
                             CupertinoIcons.heart_fill,
                             size: 29,
-                            color: isLiked ? BooksArenaColors.orangeColor: BooksArenaColors.lightGreyColor,
+                            color: isLiked
+                                ? BooksArenaColors.orangeColor
+                                : BooksArenaColors.lightGreyColor,
                           ),
                         ),
                       ],

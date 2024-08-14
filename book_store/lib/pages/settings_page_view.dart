@@ -6,9 +6,7 @@ import 'package:flutter/widgets.dart';
 class SettingsPageView extends StatelessWidget {
   final Function(int) openTab;
 
-  const SettingsPageView({
-    required this.openTab,
-    Key? key}) : super(key: key);
+  const SettingsPageView({required this.openTab, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

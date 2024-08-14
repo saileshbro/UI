@@ -5,9 +5,7 @@ import 'package:flutter/widgets.dart';
 
 class LandingPageView extends StatelessWidget {
   final Function(int) openTab;
-  const LandingPageView({
-    required this.openTab,
-    Key? key}) : super(key: key);
+  const LandingPageView({required this.openTab, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

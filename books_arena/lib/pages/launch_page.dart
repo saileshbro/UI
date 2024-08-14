@@ -12,7 +12,7 @@ class LaunchPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(
-          children: [ 
+          children: [
             const SizedBox(height: 80),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -4,7 +4,7 @@
 
 ### Please hit the star ⭐️ to show appreciation. Thanks!!
 
-# 1. Onboarding Plnats Store App (Day 14 of 30, UI challenge)
+# 1. Onboarding Plants Store App (Day 14 of 30, UI challenge)
 ### [Designer Credits](https://dribbble.com/shots/24101329-onboarding-for-plant-app)
 <a href= "plants_ui/"><img src="plants_ui/1.png" width="27%" height="27%"></a> <a href= "plants_ui/"><img src="plants_ui/2.png" width="27%" height="27%"></a> <a href= "plants_ui/"><img src="plants_ui/3.png" width="27%" height="27%"></a>
 

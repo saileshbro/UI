@@ -13,7 +13,7 @@
 # Hi 👋, Currently...
 ## ...I'm looking for a Flutter Developer job, and is based in Ontario, Canada. Please refer me if possible. Thank you, your help matters ❤️....
 
-# 1. Travel Bookin App (Day 18 of 30, UI challenge)
+# 1. Travel Booking App (Day 18 of 30, UI challenge)
 ### [Designer Credits](https://dribbble.com/shots/19332459-Travel-service-Mobile-app)
 <a href= "travel_booking/"><img src="travel_booking/1.png" width="27%" height="27%"></a> <a href= "travel_booking/"><img src="travel_booking/2.png" width="27%" height="27%"></a> <a href= "travel_booking/"><img src="travel_booking/3.png" width="27%" height="27%"></a>
 

@@ -88,6 +88,7 @@ class DatingProfilePageState extends State<DatingProfile> {
     );
   }
 }
+
 class ProfileScrollingPage extends StatelessWidget {
   const ProfileScrollingPage({Key? key}) : super(key: key);
 
@@ -238,7 +239,8 @@ class DaitngProfileCard extends StatelessWidget {
                       Expanded(
                         child: GestureDetector(
                           behavior: HitTestBehavior.translucent,
-                          onTap: () => controller.swipe(CardSwiperDirection.left),
+                          onTap: () =>
+                              controller.swipe(CardSwiperDirection.left),
                           child: Container(
                             width: 50,
                             height: 50,

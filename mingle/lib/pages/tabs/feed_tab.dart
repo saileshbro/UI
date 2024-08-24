@@ -16,7 +16,8 @@ class _FeedTabState extends State<FeedTab> {
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
       body: ListView(
-        padding: const EdgeInsets.only(top: 60, left: 25, right: 25, bottom: 140),
+        padding:
+            const EdgeInsets.only(top: 60, left: 25, right: 25, bottom: 140),
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

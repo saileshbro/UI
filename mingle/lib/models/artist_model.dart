@@ -17,8 +17,6 @@ class ArtistModel {
     required this.assetList,
   });
 
-  
-
   // dummy data
   static final List<ArtistModel> dummyData = [
     ArtistModel(

@@ -18,7 +18,8 @@ class DatingProfileModel {
   });
 
   static List<String> getAssetPaths() {
-    final list = List.generate(13, (index) => 'assets/profiles/profile_$index.png');
+    final list =
+        List.generate(13, (index) => 'assets/profiles/profile_$index.png');
     list.shuffle();
     return list;
   }

@@ -360,28 +360,28 @@ class HotelOffersWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 180,
-        child: ListView.builder(
-          padding: const EdgeInsets.only(left: 25),
-          scrollDirection: Axis.horizontal,
-          itemCount: 10,
-          itemBuilder: (context, index) {
-            final rating =
-                (Random.secure().nextInt(3) + 2) + Random.secure().nextDouble();
-            return GestureDetector(
-      behavior: HitTestBehavior.translucent,
-      onTap: () {
-        Navigator.pushReplacement(
-          context,
-          CupertinoPageRoute(
-            builder: (context) => DestinationDetailedPage(
-              assetIndex: (index + shiftImageIndex) % 6,
-              destinationName: 'Yutoa',
-            ),
-          ),
-        );
-      },
-      child: Container(
+      height: 180,
+      child: ListView.builder(
+        padding: const EdgeInsets.only(left: 25),
+        scrollDirection: Axis.horizontal,
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          final rating =
+              (Random.secure().nextInt(3) + 2) + Random.secure().nextDouble();
+          return GestureDetector(
+            behavior: HitTestBehavior.translucent,
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                CupertinoPageRoute(
+                  builder: (context) => DestinationDetailedPage(
+                    assetIndex: (index + shiftImageIndex) % 6,
+                    destinationName: 'Yutoa',
+                  ),
+                ),
+              );
+            },
+            child: Container(
               margin: const EdgeInsets.only(right: 20),
               height: 140,
               width: 220,
@@ -438,10 +438,10 @@ class HotelOffersWidget extends StatelessWidget {
                   ),
                 ],
               ),
-            ),);
-          },
-        ),
-      
+            ),
+          );
+        },
+      ),
     );
   }
 }

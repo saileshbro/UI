@@ -15,7 +15,7 @@
 ## I'm looking for a Flutter Developer job, and is based in Ontario, Canada. Please refer me if possible. Thank you, your help really matters ❤️....
 
 
-# 1. Dating App (Day 22 of 30, UI challenge)
+# 1. Socialize Chats App (Day 22 of 30, UI challenge)
 ### [Designer Credits](https://dribbble.com/shots/24005518-Dating-Mobile-App)
 <a href= "social_chats/"><img src="social_chats/1.png" width="27%" height="27%"></a> <a href= "social_chats/"><img src="social_chats/2.png" width="27%" height="27%"></a>
 

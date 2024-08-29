@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -83,7 +85,7 @@ class HomePage extends StatelessWidget {
                             child: SmallChipKMRangeWidget(
                               progressColor: RangeRoverColors.yellowColor,
                               text1: 'KM RANGE',
-                              text2: '45%',
+                              text2: '${Random.secure().nextInt(99)}%',
                               progressValue: .45,
                             ),
                           ),
